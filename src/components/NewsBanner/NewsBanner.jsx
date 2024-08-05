@@ -1,4 +1,5 @@
 import { formatTimeAgo } from '../../helpers/formatTimeAgo';
+import withSkeleton from '../../helpers/hocs/withSkeleton';
 import styles from './styles.module.css'
 import Image from '../Image/Image';
 const NewsBanner = ({item}) => {
@@ -10,4 +11,6 @@ const NewsBanner = ({item}) => {
 			</div>
 		);
 }
-export default NewsBanner
+const NewsBannerWithSkeleton = withSkeleton(NewsBanner, 'banner', 1);
+
+export default NewsBannerWithSkeleton;

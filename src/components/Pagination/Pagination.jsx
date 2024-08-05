@@ -1,41 +1,42 @@
 import styles from './styles.module.css';
+
 const Pagination = ({
+	totalPages,
 	handlePreviousPage,
 	handleNextPage,
 	handlePageClick,
-	totalPage,
 	currentPage,
 }) => {
 	return (
 		<div className={styles.pagination}>
 			<button
-				className={styles.arrow}
+				disabled={currentPage <= 1}
 				onClick={handlePreviousPage}
-				disabled={currentPage === 1}
+				className={styles.arrow}
 			>
 				{'<'}
 			</button>
-
 			<div className={styles.list}>
-				{[...Array(totalPage)].map((_, i) => {
+				{[...Array(totalPages)].map((_, index) => {
 					return (
 						<button
+							onClick={() => handlePageClick(index + 1)}
 							className={styles.pageNumber}
-							key={i}
-							onClick={() => handlePageClick(i + 1)}
-							disabled={currentPage === i + 1}
+							disabled={index + 1 === currentPage}
+							key={index}
 						>
-							{i + 1}
+							{index + 1}
 						</button>
 					);
 				})}
 			</div>
 
 			<button
-				className={styles.arrow}
+				disabled={currentPage >= totalPages}
 				onClick={handleNextPage}
-				disabled={currentPage === 10}
-				>{'>'}
+				className={styles.arrow}
+			>
+				{'>'}
 			</button>
 		</div>
 	);
