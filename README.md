@@ -1,6 +1,6 @@
 # React News
 
-<img src="demo.gif" width="100%" height="auto" />
+<img src="demo.png" width="100%" height="auto" />
 
 ### Описание
 
