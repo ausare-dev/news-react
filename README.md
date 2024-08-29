@@ -1,8 +1,19 @@
-# React + Vite
+# React News
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="demo.gif" width="100%" height="auto" />
 
-Currently, two official plugins are available:
+### Описание
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Новостной сайт, разработанный на React с использованием Redux и RTK Query. Изначально написан на JavaScript, затем переписан на TypeScript. Реализованы функции поиска и пагинации.
+
+### Особенности
+
+- Отзывчивая верстка
+
+- Vite в качестве сборщика
+
+- Стейт менеджер Redux
+
+- Currents API для получения новостей
+
+
